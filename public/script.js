@@ -24,3 +24,28 @@ document.querySelectorAll('.section-nav a').forEach((link) => {
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+const langToggle = document.getElementById('langToggle');
+const pageTitle = document.getElementById('pageTitle');
+const pageDescription = document.getElementById('pageDescription');
+
+function applyLanguage(lang) {
+  const dict = translations[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.dataset.i18n;
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+  pageTitle.textContent = dict.title;
+  pageDescription.setAttribute('content', dict.metaDescription);
+  langToggle.textContent = lang === 'en' ? 'KZ' : 'EN';
+  localStorage.setItem('cv-lang', lang);
+}
+
+const savedLang = localStorage.getItem('cv-lang');
+applyLanguage(savedLang === 'kk' ? 'kk' : 'en');
+
+langToggle.addEventListener('click', () => {
+  const current = document.documentElement.lang === 'kk' ? 'kk' : 'en';
+  applyLanguage(current === 'en' ? 'kk' : 'en');
+});

@@ -70,11 +70,17 @@ body {
   padding: 64px 24px 40px;
 }
 
-.theme-toggle {
+.toggle-stack {
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.theme-toggle {
+  position: static;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -89,6 +95,12 @@ body {
 
 .theme-toggle:hover {
   transform: scale(1.08);
+}
+
+.lang-toggle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 /* Hero */
@@ -416,7 +428,7 @@ body {
 }
 
 @media print {
-  .theme-toggle, .section-nav { display: none; }
+  .toggle-stack, .section-nav { display: none; }
   .bg-decor { display: none; }
   .card { box-shadow: none; break-inside: avoid; }
 }
