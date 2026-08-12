@@ -1,0 +1,9 @@
+{
+  "name": "gazizdevcv",
+  "version": "1.0.0",
+  "description": "Single-page personal CV website",
+  "scripts": {
+    "start": "npx serve public"
+  },
+  "private": true
+}

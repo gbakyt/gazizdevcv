@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gaziz Bakyt — Senior Software Engineer</title>
+<meta name="description" content="Gaziz Bakyt — Senior Software Engineer. 6+ years building high-load microservices, REST/SOAP APIs and enterprise integrations." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">🌙</button>
+
+<div class="bg-decor" aria-hidden="true"></div>
+
+<main class="page">
+
+  <header class="hero" id="top">
+    <div class="hero-photo">
+      <img src="assets/photo.jpg" alt="Gaziz Bakyt" id="photo" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';" />
+      <div class="photo-fallback" id="photoFallback">GB</div>
+    </div>
+    <div class="hero-text">
+      <h1>Gaziz Bakyt</h1>
+      <p class="role">Senior Software Engineer</p>
+      <p class="tagline">Owning backend architecture end-to-end — database, messaging, and integration design — across enterprise and government-scale systems.</p>
+      <div class="contact-list" id="contactLinks">
+        <a href="mailto:gazizbakhyt@gmail.com" class="contact-line"><span class="contact-icon">✉️</span>gazizbakhyt@gmail.com</a>
+        <a href="tel:+77771403805" class="contact-line"><span class="contact-icon">📞</span>+7 (777) 140-3805</a>
+        <a href="https://t.me/gazizdev" target="_blank" rel="noopener" class="contact-line"><span class="contact-icon">💬</span>t.me/gazizdev</a>
+        <a href="https://www.linkedin.com/in/gaziz-bakyt-726838236/" target="_blank" rel="noopener" class="contact-line"><span class="contact-icon">🔗</span>linkedin.com/in/gaziz-bakyt-726838236</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="section-nav" aria-label="Section navigation">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="card">
+    <h2>About</h2>
+    <p>Backend-focused Java developer with 6+ years building and owning large-scale systems end-to-end — from initial architecture decisions through production. Currently driving core architecture for a large internal enterprise platform at BI Group, including its persistence, messaging, and integration layers and an event-driven Kafka platform with built-in failure replay. Previously built and hardened a ~25-service SOAP/REST integration platform for a national government records system, including finding and fixing a security vulnerability shared across multiple services. Comfortable across the full stack: Spring Boot, jOOQ/JPA, Kafka/RabbitMQ, PostgreSQL/MongoDB/Redis, and OAuth2/Keycloak authentication. Open to remote roles and relocation for the right opportunity.</p>
+  </section>
+
+  <section id="experience" class="card">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h3>Senior Software Engineer</h3>
+            <span class="timeline-date">Jun 2023 — Present</span>
+          </div>
+          <p class="timeline-company">BI Group · Astana</p>
+          <ul>
+            <li>Selected and stood up the core backend architecture for a large-scale internal enterprise platform — type-safe SQL query building in place of a traditional ORM, schema migrations, event-driven messaging, and object storage — decisions that still underpin the system (1,000+ files, 100+ REST controllers, 600+ endpoints).</li>
+            <li>Designed multi-tenant JWT authentication supporting two separate identity realms (internal staff and an external mobile app) against a single API, with hardened security headers.</li>
+            <li>Built the platform's Kafka integration layer end-to-end, including a message-log-and-replay subsystem that lets failed integration events be re-processed from an admin view instead of manually replaying topics.</li>
+            <li>Designed and built an internal workflow board from scratch — configurable status funnels, SLA tracking with automatic overdue detection, and full audit history.</li>
+            <li>Built an automated multi-step eligibility engine that validates a business transaction against ~10 independent checks before allowing it to proceed.</li>
+            <li>Own the majority of the platform's external-system integrations — accounting/ERP, identity, e-signature, and OCR services — spanning more than a dozen integration clients.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h3>Software Engineer</h3>
+            <span class="timeline-date">Apr 2022 — Jun 2023</span>
+          </div>
+          <p class="timeline-company">Samgau Holding · Astana</p>
+          <ul>
+            <li>Contributed across roughly 25 independently-deployed SOAP/REST microservices for a national government records platform covering court records, criminal/administrative case lookups, wanted-persons registries, vital records, traffic-accident records, probation checks, and emergency-incident reporting.</li>
+            <li>Found and fixed an XXE (XML External Entity) vulnerability in a shared XML-deserialization utility, hardening it against malicious external entity injection, and applied the fix consistently across multiple services.</li>
+            <li>Built several services end-to-end from scratch — contract-first SOAP endpoints (XSD/WSDL), JPA/Flyway-backed persistence, and CI/CD pipelines.</li>
+            <li>Reworked an integration client's architecture from an inbound REST server into an outbound OAuth2 client-credentials integration, adding resubmission logic for changed records and audit-history preservation across transaction rollbacks.</li>
+            <li>Optimized production SQL queries — replacing expensive subqueries with indexed lookups — and fixed data-precision bugs by correcting field types.</li>
+            <li>Built a reusable Kazakhstani national-ID (IIN) checksum validator adopted across multiple services.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h3>Software Engineer</h3>
+            <span class="timeline-date">Jan 2020 — Mar 2022</span>
+          </div>
+          <p class="timeline-company">QazCloud · Astana</p>
+          <ul>
+            <li>Contributed to a Security Operations Center platform for malware detection and reporting.</li>
+            <li>Owned feature development, bug fixes, and long-term maintenance for a production security system.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="skills-grid" id="skillsGrid">
+      <span class="skill-tag">Java (8 / 11 / 17 / 21)</span>
+      <span class="skill-tag">Spring Boot</span>
+      <span class="skill-tag">REST</span>
+      <span class="skill-tag">SOAP</span>
+      <span class="skill-tag">OAuth2 / JWT</span>
+      <span class="skill-tag">PostgreSQL</span>
+      <span class="skill-tag">jOOQ</span>
+      <span class="skill-tag">JPA / Hibernate</span>
+      <span class="skill-tag">MinIO</span>
+      <span class="skill-tag">Apache Kafka</span>
+      <span class="skill-tag">Docker</span>
+      <span class="skill-tag">CI/CD</span>
+      <span class="skill-tag">Maven</span>
+      <span class="skill-tag">SOLID</span>
+      <span class="skill-tag">OOP &amp; IoC</span>
+      <span class="skill-tag">Git</span>
+    </div>
+  </section>
+
+  <section id="highlights" class="card">
+    <h2>Highlights</h2>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card">
+        <h3>Enterprise Platform Architecture &amp; Kafka Replay System</h3>
+        <p>Stood up the core architecture of a large internal enterprise platform at BI Group — persistence, messaging, and integrations — including a Kafka platform with a built-in subsystem to replay failed integration events from an admin view.</p>
+      </div>
+      <div class="project-card">
+        <h3>Government Records Integration Platform</h3>
+        <p>Contributed across ~25 SOAP/REST microservices for a national government records system, including finding and fixing a security vulnerability shared across multiple services.</p>
+      </div>
+      <div class="project-card">
+        <h3>Esports Tournament Federation Platform</h3>
+        <p>Solo-built backend (Java 21, Spring Boot 3) for a Kazakhstani esports federation — tournament bracket engine, Keycloak-based auth with SMS verification, national-ID document validation, and MinIO file storage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="card">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h3>Bachelor's, Information Systems</h3>
+            <span class="timeline-date">2026</span>
+          </div>
+          <p class="timeline-company">Kazakh University of Technology and Business · Astana</p>
+        </div>
+      </div>
+    </div>
+    <h2 style="margin-top:28px">Languages</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Kazakh — Native</span>
+      <span class="skill-tag">English — C1 Fluent</span>
+    </div>
+  </section>
+
+  <section id="contact" class="card contact-card">
+    <h2>Let's Connect</h2>
+    <p>Open to new remote opportunities and relocation — feel free to reach out.</p>
+    <div class="contact-list contact-list-center">
+      <a href="mailto:gazizbakhyt@gmail.com" class="contact-line"><span class="contact-icon">✉️</span>gazizbakhyt@gmail.com</a>
+      <a href="tel:+77771403805" class="contact-line"><span class="contact-icon">📞</span>+7 (777) 140-3805</a>
+      <a href="https://t.me/gazizdev" target="_blank" rel="noopener" class="contact-line"><span class="contact-icon">💬</span>t.me/gazizdev</a>
+      <a href="https://www.linkedin.com/in/gaziz-bakyt-726838236/" target="_blank" rel="noopener" class="contact-line"><span class="contact-icon">🔗</span>linkedin.com/in/gaziz-bakyt-726838236</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Gaziz Bakyt. Built with care.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
